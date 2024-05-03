@@ -25,7 +25,7 @@ EXPOSE 3000
 
 FROM base as prod
 COPY . .
-RUN pnpm install --prod
+RUN pnpm install
 RUN pnpm build  
 USER node
 CMD ["pnpm", "start"]
